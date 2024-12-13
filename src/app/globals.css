@@ -14,24 +14,40 @@
   }
 }
 
-/* body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
-
-body{
+/* body styles */
+body {
   background: rgb(251, 243, 255);
   height: 100%;
   width: 100%;
- 
+  padding: 1rem; /* Adds padding for better spacing */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 640px) { /* Small screens like mobile */
+  body {
+    background: rgb(241, 234, 254); /* Slightly lighter background */
+    padding: 0.5rem; /* Smaller padding for mobile */
+  }
+}
+
+@media (max-width: 768px) { /* Tablets and smaller screens */
+  body {
+    background: rgb(235, 226, 248); /* Slightly different background color for tablet */
+    padding: 0.75rem; /* Medium padding for tablets */
+  }
+}
+
+@media (min-width: 1024px) { /* Desktop and larger screens */
+  body {
+    background: rgb(251, 243, 255); /* Reverts to the default background color */
+    padding: 2rem; /* Larger padding for desktops */
+  }
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0; 
 }
